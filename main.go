@@ -32,6 +32,20 @@ func main() {
 				},
 			},
 		},
+		{
+			Name:        "pwdg",
+			HelpName:    "",
+			Usage:       "funCLI pwdg -l 14",
+			Description: "yet another password generator",
+			Action:      commands.Pwdg,
+			Flags: []cli.Flag{
+				&cli.UintFlag{
+					Name:    "length",
+					Usage:   "enter your password length",
+					Aliases: []string{"l"},
+				},
+			},
+		},
 	}
 	err := app.Run(os.Args)
 
